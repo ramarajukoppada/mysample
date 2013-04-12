@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+
+  # test comment added in branch - testbranch
   def new
   @user = User.new
   end
