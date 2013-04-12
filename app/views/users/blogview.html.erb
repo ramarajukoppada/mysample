@@ -1,0 +1,20 @@
+
+<div class="hero-unit">
+<p align="right"> <%= link_to "ADD NEW COMMUNITY", community_path %></p>
+<p align="right"> <%= link_to "ADD NEW POST", blog_path %></p>
+<p align="right"> <%= link_to "ADD FRIENDS", user_add_path %></p>
+<h4 class="subheading">My Posts</h4>
+      <% @blogview.each do |b| %>
+      
+      <div class="badge">
+        <h5><%= b.title %></h5>
+        <p><%= b.post %><p>
+    
+      </div>
+    <% end %>
+ 
+
+   
+
+
+</div>

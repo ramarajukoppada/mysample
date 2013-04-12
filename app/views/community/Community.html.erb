@@ -1,0 +1,38 @@
+
+<div class="hero-unit">
+
+<h4 class="subheading">Add community</h4>
+      <% @Community.each do |c| %>
+      
+      <div class="badge">
+       <!--  <h5><%= c.UserID %></h5>
+       
+       	<p><%= c.CommunityDesc %><p> -->
+       		 <p><%= c.CommunityName %><p>
+  <%= javascript_tag "new Popup('cell_popup','cell_link_#{@Community.UserID}')" %>
+      </div>
+    <% end %>
+ 
+ <%= form_tag community_create_path do %>
+ <p align="left">
+    <%= label_tag :CommunityName ,  "CommunityName :"  %>
+    <%= text_field_tag :CommunityName %>
+ </p>
+ <p align="left">
+    <%= label_tag :CommunityDesc,"CommunityDesc :"%>
+     <%= text_area_tag :CommunityDesc %>
+  </p>
+  <p class="button"><%= submit_tag "Submit" %></p>
+
+
+<% end %>
+
+<div id="cell_popup">
+	<table width="418" border="0">
+  <tr>
+    <td width="201" align="center" valign="top">Raw</td>
+    <td width="201" align="center" valign="top">Repaired</td>
+  </tr>
+  </table>
+</div>
+</div>

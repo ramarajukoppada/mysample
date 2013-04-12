@@ -1,0 +1,17 @@
+
+<h4 class="subheading">Add Friends</h4> <br /><br />
+
+<!--<%= select_tag "list[]", options_from_collection_for_select(@userview, "id", "email"), :multiple=>true %>-->
+
+
+
+
+<% for task in @userview %>
+    <li>
+     <p class="subheading"> <%= check_box_tag "task_ids[]", task.id %> <%= task.email %></p>
+
+    </li>
+    <br /><br />
+  <% end %>
+
+  <p class="button"><%= submit_tag "Add" %></p> <br />
